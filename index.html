@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Управління студентами</h1>
+
+      <!-- Форма для додавання нового студента -->
+      <form id="studentForm">
+        <input type="text" id="firstName" placeholder="Ім'я" required />
+        <input type="text" id="lastName" placeholder="Прізвище" required />
+        <input type="number" id="age" placeholder="Вік" required />
+        <input type="text" id="course" placeholder="Курс" required />
+        <input type="text" id="faculty" placeholder="Факультет" required />
+        <input
+          type="text"
+          id="subjects"
+          placeholder="Курси (через кому)"
+          required
+        />
+        <button type="submit">Додати студента</button>
+      </form>
+
+      <!-- Таблиця для відображення студентів -->
+      <table id="studentsTable">
+        <thead>
+          <tr>
+            <th>Ім'я</th>
+            <th>Прізвище</th>
+            <th>Вік</th>
+            <th>Курс</th>
+            <th>Факультет</th>
+            <th>Курси</th>
+            <th>Дії</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <div class="modal" id="editModal">
+        <div class="modal-content">
+          <span id="closeModal" class="close">&times;</span>
+          <h2>Редагувати студента</h2>
+          <form id="editForm">
+            <input type="text" id="editFirstName" placeholder="Ім'я" required />
+            <input
+              type="text"
+              id="editLastName"
+              placeholder="Прізвище"
+              required
+            />
+            <input type="number" id="editAge" placeholder="Вік" required />
+            <input type="text" id="editCourse" placeholder="Курс" required />
+            <input
+              type="text"
+              id="editFaculty"
+              placeholder="Факультет"
+              required
+            />
+            <input
+              type="text"
+              id="editSubjects"
+              placeholder="Курси (через кому)"
+              required
+            />
+            <button type="submit">Оновити</button>
+          </form>
+        </div>
+      </div>
+
+      <button id="exportData">Експортувати дані</button>
+      <button id="importData">Імпортувати дані</button>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
